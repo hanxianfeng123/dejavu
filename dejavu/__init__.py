@@ -84,8 +84,15 @@ class Dejavu(object):
                 # Print traceback because we can't reraise it here
                 traceback.print_exc(file=sys.stdout)
             else:
+                def _convert_hashes(hashes=None):
+                    new_hashes = set()
+                    if hashes:
+                        for i in hashes:
+                            new_i =(i[0], int(i[1]))
+                            new_hashes.add(new_i)
+                    return new_hashes
                 sid = self.db.insert_song(song_name, file_hash)
-
+                hashes = _convert_hashes(hashes)
                 self.db.insert_hashes(sid, hashes)
                 self.db.set_song_fingerprinted(sid)
                 self.get_fingerprinted_songs()

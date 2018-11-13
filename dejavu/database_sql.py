@@ -2,8 +2,8 @@ from __future__ import absolute_import
 from itertools import izip_longest
 import Queue
 
-import MySQLdb as mysql
-from MySQLdb.cursors import DictCursor
+import pymysql as mysql
+from pymysql.cursors import DictCursor
 
 from dejavu.database import Database
 
