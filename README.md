@@ -1,5 +1,6 @@
 dejavu
 ==========
+**Note：if you want this works on your macOS, please refer to README_setup_mac.md**
 
 Audio fingerprinting and recognition algorithm implemented in Python, see the explanation here:  
 [How it works](http://willdrevo.com/fingerprinting-and-audio-recognition-with-python/)
